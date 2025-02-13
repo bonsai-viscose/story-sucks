@@ -191,7 +191,7 @@ func main() {
 		// Отправляем запрос на авторизацию
 		authToken, err := sendAuthRequest(address.Hex(), nonce, signature)
 		if err != nil {
-			fmt.Println("Ошибка авторизации:", err)
+			fmt.Printf("%s: %s\n", address.Hex(), err)
 			continue
 		}
 
